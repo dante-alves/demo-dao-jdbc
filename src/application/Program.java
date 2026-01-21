@@ -1,5 +1,7 @@
 package application;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 import model.dao.DaoFactory;
@@ -33,6 +35,18 @@ public class Program {
 			System.out.println(sel);
 		}
 		System.out.println("\n======");
+		
+//		System.out.println("=== TEST 4: seller insert ===");
+//		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+//		try {
+//			sellerDao.insert(new Seller(1, "Breno", "brenoalvessilva@gmail.com", sdf.parse("15/08/1998"), 8000.0, dep1));
+//		} catch (ParseException e) {
+//			e.printStackTrace();
+//		}
+//		System.out.println("\n======");
+		System.out.println("=== TEST 5: seller update ===");
+		seller.setName("Maria Red");
+		sellerDao.update(seller);
+		System.out.println("\n======");
 	}
-
 }
